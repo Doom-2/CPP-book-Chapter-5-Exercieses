@@ -116,7 +116,7 @@ int cow(string s1, string s2)
 {
     int matches_num = 0;
     for (int i = 0; i < s1.size(); ++i)
-        if (s1[i] != s2[i] && s2.find(s1[i]) != string::npos)
+        if (s1[i] != s2[i] && s1.find(s2[i]) != string::npos)
             matches_num++;
     return matches_num;
 }
