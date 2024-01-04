@@ -1,5 +1,5 @@
 #include "std_lib_facilities.h"
-#include <limits>
+#include <climits>
 
 class VectorSizeOverflow
 {
@@ -54,7 +54,6 @@ int cin_positive_int()
 
 int main()
 {
-    int imax = numeric_limits<int>::max();
     vector<int> nums;
     int num, sum = 0;
     cout << "Enter the number of summands\n>";
@@ -72,7 +71,7 @@ int main()
 
         for (int i = 0; i < num; ++i)
         {
-            if (i > 0 && nums[i] > imax - sum)
+            if (i > 0 && nums[i] > INT_MAX - sum)
                 throw overflow_error("\nOverflow error!\nThe limit value range for <Int> type was exceeded during sum calculation\n");
             sum += nums[i];
         }
