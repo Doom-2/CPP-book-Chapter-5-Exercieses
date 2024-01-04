@@ -1,5 +1,4 @@
 #include "std_lib_facilities.h"
-#include <limits>
 
 class VectorSizeOverflow
 {
@@ -54,7 +53,6 @@ int cin_positive_int()
 
 int main()
 {
-    int imax = numeric_limits<int>::max();
     vector<double> nums;
     vector<double> diffs;
     int num, sum = 0;
